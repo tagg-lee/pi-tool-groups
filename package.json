@@ -1,0 +1,21 @@
+{
+  "name": "pi-tool-groups-patch",
+  "version": "0.1.0",
+  "description": "A compact three-level tool-call UI patch for Pi",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "Cool-Tagg <overmensch280@gmail.com>",
+  "keywords": [
+    "pi",
+    "pi-coding-agent",
+    "tool-calls",
+    "tui",
+    "patch"
+  ],
+  "scripts": {
+    "install-patch": "node install.mjs",
+    "uninstall-patch": "node uninstall.mjs",
+    "check": "node --check install.mjs && node --check uninstall.mjs"
+  }
+}
