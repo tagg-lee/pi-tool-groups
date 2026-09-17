@@ -52,7 +52,7 @@ The installer refuses unsupported Pi versions without changing files.
 Review the source first. Pi and this installer run with your user permissions.
 
 ```bash
-git clone https://github.com/coo-tagg/pi-tool-groups.git
+git clone https://github.com/tagg-lee/pi-tool-groups.git
 cd pi-tool-groups
 node install.mjs
 ```
