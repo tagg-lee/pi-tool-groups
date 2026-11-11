@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 
-const PATCH_MARKER = "pi-tool-groups-patch:v0.1.0";
+const PATCH_MARKER = "pi-tool-groups-patch:v0.5.0";
 
 function fail(message) {
   console.error(`\nError: ${message}`);
