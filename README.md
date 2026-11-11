@@ -37,13 +37,13 @@ Long tool outputs can dominate a coding conversation. Pi Tool Groups keeps user 
 
 ## Compatibility
 
-This patch currently supports exactly:
+Last tested with:
 
-- `@earendil-works/pi-coding-agent` **0.85.1**
+- `@earendil-works/pi-coding-agent` **1.5.2**
 - Node.js installations of Pi
 - macOS and Linux are the primary tested platforms
 
-The installer refuses unsupported Pi versions without changing files.
+There is no version pin. The installer matches exact code anchors in the Pi bundle; if any anchor is missing (e.g. a Pi release changed that code), it fails with `<label>: expected one match, found 0` and restores the original file. Fix the anchor named by `<label>` in `install.mjs`.
 
 > This is a temporary core patch, not a standard Pi extension. Pi's current extension API does not expose a parent transcript container that can replace and group multiple built-in tool rows.
 
@@ -75,7 +75,7 @@ The installer:
 
 1. Locates the active `pi` executable automatically
 2. Confirms the package is `@earendil-works/pi-coding-agent`
-3. Requires the exact supported version
+3. Requires every exact-match code anchor to be present (no version pin)
 4. Verifies every expected code location before writing
 5. Saves the original bundle under `~/.pi/agent/patch-backups/pi-tool-groups/`
 6. Runs `node --check` on the patched bundle
